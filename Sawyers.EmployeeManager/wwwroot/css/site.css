@@ -1,0 +1,218 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+/*
+    CSS resets, .sr-only
+
+    http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/*
+    Typography, Background
+*/
+
+* {
+    font-size: max(1.5vw, 1.1rem);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+:root {
+    background-color: #F9F7F1;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/*
+    Utilities
+*/
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
+/*
+    Objects
+*/
+
+.grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 150px;
+    grid-auto-rows: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-form {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 150px auto;
+    grid-auto-rows: 3rem;
+    justify-items: left;
+    align-items: center;
+}
+
+.flex-row {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: max(1.5rem, 3vw);
+    margin: auto auto 0px auto;
+}
+
+/*
+    Views
+*/
+
+/* MainLayout */
+
+/* The following styles create the containers for the navmenu and main. They are primarily flexbox based. */
+
+.box-mainlayout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navbar-mainlayout {
+    padding: max(25px, 3.5vw);
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-right: 1px solid #691512;
+}
+
+/*@media screen and (max-width:) {
+    .navbar-mainlayout {
+        margin: auto;
+        padding: 35px;
+    }
+}
+*/
+.body-mainlayout {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    justify-content: center;
+    align-content: center;
+}
+
+/* NavMenu */
+
+.navalignmentbox-navmenu {
+    width: fit-content;
+}
+
+.sawyers-logobox-navmenu {
+    border: 1px solid #691512;
+    width: fit-content;
+}
+
+.sawyers-logo-navmenu {
+    margin: auto;
+    color: #691512;
+    font-size: max(2rem, 3.5vw);
+    padding: max(35px, 3.5vw);
+}
+
+.navbox-navmenu {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Index */
+
+.em-index {
+    font-size: max(1.1rem, 2vw);
+}
+
+/* EmployeeOverview */
+
+.employeebox-employeeoverview {
+    margin: auto;
+    border: 1px solid black;
+}
+
+/* EmployeeForm */
+
+.employeeform {
+    margin: auto;
+}
